@@ -43,4 +43,25 @@ public class Employe {
     public double salaireNetApresImpot(){
         return (salaireNetAvantImpot() - impotFederal()) - impotProvincial();
     }
+
+    public int joursVacances(){
+        int jours = 0;
+        if(this.numero.charAt(0) == '1'){
+            jours = 5 + this.anciennete;
+        }
+        if(this.numero.charAt(0) == '2'){
+            jours = 10 + this.anciennete;
+        }
+        if(this.numero.charAt(0) == '3'){
+            jours = 15 + this.anciennete;
+        }
+        if(this.numero.charAt(0) == '4'){
+            jours = 20 + this.anciennete;
+        }
+        return jours;
+    }
+
+    public void heuresSup(double heure){
+        this.nbreHeuresSemaine += heure;
+    }
 }
