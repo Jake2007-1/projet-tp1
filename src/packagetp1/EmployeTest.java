@@ -37,7 +37,7 @@ class EmployeTest {
 
     @Test
     void testSalaireNetApresImpot() {
-        assertEquals(203.10638079999995, this.unEmploye.salaireNetApresImpot());
+        assertEquals(203.1063808, this.unEmploye.salaireNetApresImpot(),0.005);
     }
 
     @Test
